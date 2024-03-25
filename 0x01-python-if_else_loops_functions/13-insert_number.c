@@ -13,7 +13,13 @@ listint_t *insert_node(listint_t **head, int number)
 	struct listint_s *ptr;
 	struct listint_s *new_n = malloc(sizeof(struct listint_s));
 
+
+
 	ptr = *head;
+
+	if (head == NULL)
+		return NULL;
+
 
 	if (new_n == NULL)
 	{
@@ -37,7 +43,7 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	while (ptr != NULL)
 	{
-		if ((ptr->n < new_n->n) && (ptr->next->n > new_n->n))
+		if (ptr->next->n > new_n->n)
 		{
 			new_n->next = ptr->next;
 			ptr->next = new_n;
@@ -45,7 +51,7 @@ listint_t *insert_node(listint_t **head, int number)
 		}
 		ptr = ptr->next;
 	}
-	ptr = new_n;
+	ptr->next = new_n;
 	new_n->next = NULL;
 	return (new_n);
 }
