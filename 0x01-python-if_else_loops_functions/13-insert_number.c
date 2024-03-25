@@ -22,19 +22,32 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	new_n->n = number;
 
-	if (head == NULL)
+	if (*head == NULL)
 	{
 		printf("List is empty");
+		new_n->next = NULL;
+		*head = new_n;
+		return (new_n);
 	}
+/*	if (head->n > new_n->n)
+	{
+		new_n->next = ptr;
+		*head = new_n;
+		return (new_n);
+	}*/
 	while (ptr != NULL)
 	{
 		if ((ptr->n < new_n->n) && (ptr->next->n > new_n->n))
 		{
 			new_n->next = ptr->next;
 			ptr->next = new_n;
-			ptr = ptr->next;
+		/*	ptr = ptr->next;*/
+	
 		}
 		ptr = ptr->next;
+	
 	}
+	ptr = new_n;
+	new_n->next = NULL;
 	return (new_n);
 }
