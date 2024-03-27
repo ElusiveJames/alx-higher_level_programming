@@ -7,7 +7,7 @@ if __name__ == "__main__":
     elif len(sys.argv[1:]) > 1:
         print(f"{len(sys.argv[1:])} arguments:")
         while count <= len(sys.argv[1:]):
-            print(f"{count} : {sys.argv[count]}")
+            print(f"{count}: {sys.argv[count]}")
             count += 1
     else:
         print("0 arguments.")
