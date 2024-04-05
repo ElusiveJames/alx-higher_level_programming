@@ -11,8 +11,7 @@ class Square:
             size: object variable
         Raises:
             TypeError: if size is not an integer
-            ValueError: if size is negative   
-        """
+            ValueError: if size is negative."""
         if not isinstance(size, int):
             raise TypeError('size must be an integer')
         elif size < 0:
