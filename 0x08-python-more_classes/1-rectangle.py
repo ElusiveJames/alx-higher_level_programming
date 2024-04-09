@@ -5,8 +5,8 @@
 class Rectangle:
     """creating an empty class"""
     def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
@@ -26,7 +26,7 @@ class Rectangle:
     @property
     def height(self):
         """show the height"""
-        return sel.__height
+        return self.__height
 
     @height.setter
     def height(self, value):
