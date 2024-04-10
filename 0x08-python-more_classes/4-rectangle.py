@@ -62,4 +62,4 @@ class Rectangle:
         """ return string repesentation of the object"""
         if self.__width == 0 or self.__height == 0:
             return ("")
-        return f"Rectangle({self.__height}, {self.__width})"
+        return f"Rectangle({self.width}, {self.height})"
