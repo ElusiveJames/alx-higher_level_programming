@@ -52,12 +52,14 @@ class Rectangle:
             return perimeter
 
     def __str__(self):
+        """print string representation in human readable format"""
         if self.__width == 0 or self.__height == 0:
             return str()
         string = (('#' * self.__width) + '\n') * self.__height
         return string[:-1]
 
     def __repr__(self):
+        """ return string repesentation of the object"""
         if self.__width == 0 or self.__height == 0:
             return ("")
         return f"Rectangle({self.__height}, {self.__width})"
