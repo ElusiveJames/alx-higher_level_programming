@@ -10,16 +10,23 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *ptr = NULL;
+	listint_t *speed = NULL;
 	listint_t *head = list;
 
 	if (list == NULL)
 		return (0);
 	ptr = head;
+	speed = head;
 	while (ptr->next != NULL)
 	{
-		if (ptr->next == head)
+		if (ptr->next == head || ptr->next == ptr)
 			return (1);
 		ptr = ptr->next;
+		speed = speed->next->next;
+		if (speed == NULL || speed == head)
+			return (0);
+		if (speed == ptr)
+			return (1);
 	}
 
 	return (0);
