@@ -17,7 +17,7 @@ int check_cycle(listint_t *list)
 		return (0);
 	ptr = head;
 	speed = head;
-	while (ptr != NULL)
+	while (ptr->next != NULL)
 	{
 		if (ptr->next == head)
 			return (1);
