@@ -19,11 +19,11 @@ int check_cycle(listint_t *list)
 	speed = head;
 	while (ptr->next != NULL)
 	{
-		if (ptr->next == head || ptr->next == ptr)
+		if (ptr->next == head)
 			return (1);
 		ptr = ptr->next;
 		speed = speed->next->next;
-		if (speed == NULL || speed == head)
+		if (speed == NULL)
 			return (0);
 		if (speed == ptr)
 			return (1);
