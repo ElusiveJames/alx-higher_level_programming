@@ -1,5 +1,5 @@
 #!/usr/bin/python3
- def magic_calcultion(a, b, c):
+def magic_calcultion(a, b, c):
     if a < b:
         return c
     elif c > b:
