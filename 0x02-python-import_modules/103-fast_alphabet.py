@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-print(f"{str}")
+print(*map(chr, range(ord('A'), ord('Z') + 1)), sep="")
