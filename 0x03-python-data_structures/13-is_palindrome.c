@@ -9,12 +9,12 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *temp = NULL;
 	int data[100];
-	int len, j;
+	int len, j, i;
 
 	if (head == NULL)
 		return (1);
 	temp = *head;
-	int i = 0;
+	 i = 0;
 
 	while (temp != NULL)
 	{
