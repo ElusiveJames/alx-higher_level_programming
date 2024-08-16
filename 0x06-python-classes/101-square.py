@@ -66,10 +66,14 @@ class Square:
                 print(" " * self.__position[0] + "#" * self.__size)
 
     def __str__(self):
-        """ return the string representation of the object"""
+        """return string representation of the square"""
         if self.__size == 0:
             return ""
         else:
-            return "\n".join([" " * self.__position[0] +
-                              "#" * self.__size
-                              for i in range(self.__size)])
+            square_str = ""
+            for i in range(0, self.__position[1]):
+                square_str += "\n"
+            for i in range(0, self.__size):
+                square_str += " " * self.__position[0] +\
+                     "#" * self.__size + "\n"
+            return square_str
