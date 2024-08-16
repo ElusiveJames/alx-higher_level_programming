@@ -47,7 +47,7 @@ class SinglyLinkedList:
         while current:
             string += str(current.data) + "\n"
             current = current.next_node
-        return string
+        return string.rstrip("\n")
 
     def sorted_insert(self, value):
         """ insert a new Node to the SinglyLinkedList"""
