@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+""" creating a magic class"""
 import math
+""" math module"""
 class MagicClass:
     """ define a MagicClass"""
     def __init__ (self, radius):
