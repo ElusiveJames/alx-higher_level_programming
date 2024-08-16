@@ -17,6 +17,7 @@ class MagicClass:
         if not isinstance(radius, (int, float)):
             raise TypeError("radius must be a number")
         self.__radius = radius
+        
     def area(self):
         """ get area of current square"""
         return (self.__radius ** 2 * math.pi)
