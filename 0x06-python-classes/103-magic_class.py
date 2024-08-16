@@ -6,7 +6,7 @@ import math
 
 class MagicClass:
     """ define a MagicClass"""
-    def __init__(self, radius = 0):
+    def __init__(self, radius=0):
         """ initializing private  attribute radius
         Args:
             self: self initialization
@@ -17,7 +17,6 @@ class MagicClass:
         if not isinstance(radius, (int, float)):
             raise TypeError("radius must be a number")
         self.__radius = radius
-    @property
     def area(self):
         """ get area of current square"""
         return (self.__radius ** 2 * math.pi)
