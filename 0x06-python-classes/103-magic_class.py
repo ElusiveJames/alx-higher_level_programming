@@ -2,9 +2,11 @@
 """ creating a magic class"""
 import math
 """ math module"""
+
+
 class MagicClass:
     """ define a MagicClass"""
-    def __init__ (self, radius):
+    def __init__(self, radius = 0):
         """ initializing private  attribute radius
         Args:
             self: self initialization
@@ -18,8 +20,8 @@ class MagicClass:
     @property
     def area(self):
         """ get area of current square"""
-        return self.__radius ** 2 * math.pi
+        return (self.__radius ** 2 * math.pi)
 
     def circumference(self):
         """ get circumference of current square"""
-        return 2 * math.pi* self.__radius
+        return 2 * math.pi * self.__radius
