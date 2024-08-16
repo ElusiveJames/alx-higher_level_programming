@@ -6,6 +6,8 @@ class Node:
     """ define a Node"""
     def __init__(self, data, next_node=None):
         """ initializing private  attribute data"""
+        if not isinstance(data, int):
+            raise TypeError("data must be an integer")
         self.__data = data
         self.__next_node = next_node
 
