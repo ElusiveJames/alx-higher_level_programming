@@ -24,7 +24,7 @@ floats arguments
 >>> add_integer(100.3, 2)
 102
 
-no argument 
+no argument
 >>> add_integer(None)
 Traceback (most recent call last):
 ...
